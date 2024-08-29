@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define ARRAY_MAX_SIZE 5
+#define ARRAY_MAX_SIZE 10
 typedef unsigned int uint_32;
 
 void Execute_Bubble_Sort (uint_32 Data[], uint_32 Data_Length);
@@ -10,7 +10,7 @@ void Print_Array_Elements (uint_32 Data[], uint_32 Data_Length);
 
 int main()
 {
-    uint_32 Arr[ARRAY_MAX_SIZE] = {5, 3, 8, 4, 6};
+    uint_32 Arr[ARRAY_MAX_SIZE] = {8, 1, 9, 5, 0, 7, 3, 2, 4, 6};
     Print_Array_Elements(Arr, ARRAY_MAX_SIZE);
     Execute_Bubble_Sort(Arr, ARRAY_MAX_SIZE);
     Print_Array_Elements(Arr, ARRAY_MAX_SIZE);
@@ -34,7 +34,7 @@ void Execute_Bubble_Sort (uint_32 Data[], uint_32 Data_Length)
             }
             else{/* Nothing */}
         }
-        /* In case of Sorted Array The Function will terminate from the first Bubble_Iteration */
+        /* In case of Sorted Array The Function will terminate from the first Bubble_Iteration*/
         if (0 == Sorted_Flag)
         {
             return;
