@@ -3,17 +3,25 @@
 
 #define ARRAY_MAX_SIZE 10
 typedef unsigned int uint_32;
+typedef signed int sint_32;
 
 void Execute_Bubble_Sort (uint_32 Data[], uint_32 Data_Length);
+void Execute_Insertion_Sort (uint_32 Data[], uint_32 Data_Length);
 void Swap_Two_Elements (uint_32 *num1, uint_32 *num2);
 void Print_Array_Elements (uint_32 Data[], uint_32 Data_Length);
 
 int main()
 {
-    uint_32 Arr[ARRAY_MAX_SIZE] = {8, 1, 9, 5, 0, 7, 3, 2, 4, 6};
+    uint_32 Arr[ARRAY_MAX_SIZE] =  {8, 1, 9, 5, 0, 7, 3, 2, 4, 6};
+    uint_32 Arr2[ARRAY_MAX_SIZE] = {8, 1, 9, 5, 0, 7, 3, 2, 4, 6};
+
     Print_Array_Elements(Arr, ARRAY_MAX_SIZE);
     Execute_Bubble_Sort(Arr, ARRAY_MAX_SIZE);
     Print_Array_Elements(Arr, ARRAY_MAX_SIZE);
+
+    Print_Array_Elements(Arr2, ARRAY_MAX_SIZE);
+    Execute_Insertion_Sort(Arr2, ARRAY_MAX_SIZE);
+    Print_Array_Elements(Arr2, ARRAY_MAX_SIZE);
     return 0;
 }
 
@@ -59,4 +67,23 @@ void Print_Array_Elements (uint_32 Data[], uint_32 Data_Length)
         printf("%i \t", Data[Iterator]);
     }
     printf("\n");
+}
+
+void Execute_Insertion_Sort (uint_32 Data[], uint_32 Data_Length)
+{
+    uint_32 Adjacent_Iter = 0;
+    sint_32 Compare_Iter = 0;
+    uint_32 Temp = 0;
+    for (Adjacent_Iter = 1; Adjacent_Iter < Data_Length; Adjacent_Iter++)
+    {
+        Temp = Data[Adjacent_Iter];
+        Compare_Iter = Adjacent_Iter - 1;
+        while ((Temp < Data[Compare_Iter]) && (Compare_Iter >= 0))
+        {
+            Data[Compare_Iter + 1] = Data[Compare_Iter];
+            Compare_Iter--;
+        }
+        Data[Compare_Iter+1] = Temp;  
+    }
+    
 }
