@@ -21,6 +21,7 @@ void Execute_Bubble_Sort (uint_32 Data[], uint_32 Data_Length)
 {
     uint_32 Bubble_Iteration = 0;
     uint_32 Adjacent_Iteration = 0;
+    uint_32 Sorted_Flag = 0;
 
     for(Bubble_Iteration = 0 ; Bubble_Iteration < Data_Length - 1 ; Bubble_Iteration++)
     {
@@ -29,9 +30,16 @@ void Execute_Bubble_Sort (uint_32 Data[], uint_32 Data_Length)
             if (Data[Adjacent_Iteration] > Data[Adjacent_Iteration+1])
             {
                 Swap_Two_Elements(&(Data[Adjacent_Iteration]), &(Data[Adjacent_Iteration+1]));
+                Sorted_Flag = 1;
             }
             else{/* Nothing */}
         }
+        /* In case of Sorted Array The Function will terminate from the first Bubble_Iteration */
+        if (0 == Sorted_Flag)
+        {
+            return;
+        }
+        else{/* Nothing */}
         
     }
 }
