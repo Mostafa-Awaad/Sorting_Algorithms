@@ -30,7 +30,7 @@ int main()
  * @param  Data  Array of data which is needed to be sorted
  * @param  Data_Length  Size of Data Array
  * @retval  void Function does not return anything
- * @note  Not recommended for large data because of long execution time
+ * @note  Not recommended for large data because of long execution time because of Worst Case Scenario Time Complexity (O(n^2))
  * @note  Make it adaptive manually by managing the test case of passing sorted data to the Function by using Sorted_Flag
  * @note  Stable Sorting algorithm -> if there are two equal elements in the passed array of data, there will be no problem they will be adjacent
  *        after sorting
@@ -58,7 +58,6 @@ void Execute_Bubble_Sort (uint_32 Data[], uint_32 Data_Length)
             return;
         }
         else{/* Nothing */}
-        
     }
 }
 
@@ -84,7 +83,7 @@ void Print_Array_Elements (uint_32 Data[], uint_32 Data_Length)
  * @param  Data  Array of data which is needed to be sorted
  * @param  Data_Length  Size of Data Array
  * @retval  void Function does not return anything
- * @note  Not recommended for large data because of long execution time
+ * @note  Not recommended for large data because of long execution time because of Worst Case Scenario Time Complexity (O(n^2))
  * @note  it is automatically adaptive by managing the test case of passing sorted data to the Function by using Sorted_Flag
  * @note  Stable Sorting algorithm -> if there are two equal elements in the passed array of data, there will be no problem they will be adjacent
  *        after sorting
@@ -105,5 +104,4 @@ void Execute_Insertion_Sort (uint_32 Data[], uint_32 Data_Length)
         }
         Data[Compare_Iter+1] = Temp;  
     }
-    
 }
