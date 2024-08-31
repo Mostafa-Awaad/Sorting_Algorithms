@@ -31,6 +31,9 @@ int main()
  * @param  Data_Length  Size of Data Array
  * @retval  void Function does not return anything
  * @note  Not recommended for large data because of long execution time
+ * @note  Make it adaptive manually by managing the test case of passing sorted data to the Function by using Sorted_Flag
+ * @note  Stable Sorting algorithm -> if there are two equal elements in the passed array of data, there will be no problem they will be adjacent
+ *        after sorting
  */
 void Execute_Bubble_Sort (uint_32 Data[], uint_32 Data_Length)
 {
@@ -76,6 +79,16 @@ void Print_Array_Elements (uint_32 Data[], uint_32 Data_Length)
     printf("\n");
 }
 
+/**
+ * @brief  Implementing Insertion Sorting Algorithm 
+ * @param  Data  Array of data which is needed to be sorted
+ * @param  Data_Length  Size of Data Array
+ * @retval  void Function does not return anything
+ * @note  Not recommended for large data because of long execution time
+ * @note  it is automatically adaptive by managing the test case of passing sorted data to the Function by using Sorted_Flag
+ * @note  Stable Sorting algorithm -> if there are two equal elements in the passed array of data, there will be no problem they will be adjacent
+ *        after sorting
+ */
 void Execute_Insertion_Sort (uint_32 Data[], uint_32 Data_Length)
 {
     uint_32 Adjacent_Iter = 0;
