@@ -87,6 +87,7 @@ void Print_Array_Elements (uint_32 Data[], uint_32 Data_Length)
  * @note  it is automatically adaptive by managing the test case of passing sorted data to the Function by using Sorted_Flag
  * @note  Stable Sorting algorithm -> if there are two equal elements in the passed array of data, there will be no problem they will be adjacent
  *        after sorting
+ * @note  It is recommended with Linked list Sorting  "Linked List Sorting == Insertion Sort"
  */
 void Execute_Insertion_Sort (uint_32 Data[], uint_32 Data_Length)
 {
