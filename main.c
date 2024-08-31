@@ -25,6 +25,13 @@ int main()
     return 0;
 }
 
+/**
+ * @brief  Implementing Bubble Sorting Algorithm 
+ * @param  Data  Array of data which is needed to be sorted
+ * @param  Data_Length  Size of Data Array
+ * @retval  void Function does not return anything
+ * @note  Not recommended for large data because of long execution time
+ */
 void Execute_Bubble_Sort (uint_32 Data[], uint_32 Data_Length)
 {
     uint_32 Bubble_Iteration = 0;
