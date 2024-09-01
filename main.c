@@ -116,6 +116,17 @@ void Execute_Insertion_Sort (uint_32 Data[], uint_32 Data_Length)
     }
 }
 
+/**
+ * @brief  Implementing Selection Sorting Algorithm 
+ * @param  Data  Array of data which is needed to be sorted
+ * @param  Data_Length  Size of Data Array
+ * @retval  void Function does not return anything
+ * @note  It is Possible to get the Minimum Elements at any Iterations 
+ * @note  The Chosen Sorting algorithm if it is required from you a sorting algorithm that perform only one swap each one iteration which is 
+ *        Opposite in case of Bubble sort which makes many swaps in one iteration
+ * @note  Not Adaptive but I make it Manually
+ * @note  Not Stable in case of finding equal elements their locations could simply change
+ */
 void Execute_Selection_Sort (uint_32 Data[], uint_32 Data_Length)
 {
     uint_32 Selection_Iter = 0;
